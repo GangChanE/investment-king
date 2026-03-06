@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>나도 투자왕 - 명예의 전당</title>
+    <style>
+        :root {
+            --toss-blue: #3182f6;
+            --toss-red: #f04452;
+            --bg-gray: #f2f4f6;
+            --text-main: #333d4b;
+            --text-sub: #8b95a1;
+            --white: #ffffff;
+            --border-color: #e5e8eb;
+            --gold: #f5a623;
+            --silver: #a0a5aa;
+            --bronze: #cd7f32;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-gray);
+            font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
+            color: var(--text-main);
+        }
+
+        .app-layout {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: var(--bg-gray);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 40px;
+        }
+
+        /* 상단 네비게이션 및 헤더 */
+        .header-section {
+            background-color: var(--white);
+            padding: 16px 20px 24px 20px;
+            border-bottom-left-radius: 24px;
+            border-bottom-right-radius: 24px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            margin-bottom: 12px;
+        }
+
+        .top-nav {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .back-btn {
+            font-size: 20px;
+            color: var(--text-main);
+            text-decoration: none;
+            margin-right: 16px;
+            font-weight: bold;
+        }
+
+        .page-title {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .season-info {
+            font-size: 14px;
+            color: var(--text-sub);
+            margin-bottom: 4px;
+        }
+
+        .ranking-title {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--text-main);
+        }
+
+        /* 랭킹 리스트 영역 */
+        .ranking-list {
+            padding: 0 20px;
+        }
+
+        .rank-card {
+            background-color: var(--white);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 12px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            border-bottom: 1px dashed var(--border-color);
+            padding-bottom: 12px;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .rank-number {
+            font-size: 18px;
+            font-weight: 800;
+            width: 24px;
+            text-align: center;
+        }
+
+        .rank-1 { color: var(--gold); }
+        .rank-2 { color: var(--silver); }
+        .rank-3 { color: var(--bronze); }
+        .rank-normal { color: var(--text-sub); font-size: 16px; }
+
+        .user-name {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .user-yield {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--toss-red);
+        }
+
+        /* 고수의 한마디 (조언/자랑 영역) */
+        .quote-box {
+            background-color: #f9fafb;
+            padding: 12px 16px;
+            border-radius: 12px;
+            font-size: 14px;
+            color: var(--text-main);
+            position: relative;
+        }
+        
+        .quote-box::before {
+            content: "💬";
+            margin-right: 6px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="app-layout">
+    <div class="header-section">
+        <div class="top-nav">
+            <a href="index.html" class="back-btn">←</a>
+            <div class="page-title">명예의 전당</div>
+        </div>
+        <div class="season-info">3월 1주차 주간 랭킹</div>
+        <div class="ranking-title">이번 주 최고의 투자자들</div>
+    </div>
+
+    <div class="ranking-list">
+        
+        <div class="rank-card">
+            <div class="card-top">
+                <div class="user-info">
+                    <div class="rank-number rank-1">1</div>
+                    <div class="user-name">워렌버핏동생</div>
+                </div>
+                <div class="user-yield">+ 45.2%</div>
+            </div>
+            <div class="quote-box">쫄지 마세요. 공포에 사서 환희에 파는 겁니다. 기본 분석 도구 3번은 꼭 보고 매수하세요!</div>
+        </div>
+
+        <div class="rank-card">
+            <div class="card-top">
+                <div class="user-info">
+                    <div class="rank-number rank-2">2</div>
+                    <div class="user-name">단타의신</div>
+                </div>
+                <div class="user-yield">+ 38.7%</div>
+            </div>
+            <div class="quote-box">어제 광고 보고 열었던 RSI 지표가 진짜 신의 한 수였네요. 달달합니다~</div>
+        </div>
+
+        <div class="rank-card">
+            <div class="card-top">
+                <div class="user-info">
+                    <div class="rank-number rank-3">3</div>
+                    <div class="user-name">강찬</div>
+                </div>
+                <div class="user-yield">+ 31.0%</div>
+            </div>
+            <div class="quote-box">이거 은근히 중독성 있네요. 다음 주엔 1등 노려봅니다.</div>
+        </div>
+
+        <div class="rank-card">
+            <div class="card-top" style="border-bottom: none; padding-bottom: 0;">
+                <div class="user-info">
+                    <div class="rank-number rank-normal">4</div>
+                    <div class="user-name">무지성풀매수</div>
+                </div>
+                <div class="user-yield">+ 22.1%</div>
+            </div>
+            </div>
+
+    </div>
+</div>
+
+</body>
+</html>
