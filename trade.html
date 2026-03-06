@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>나도 투자왕 - 매매장</title>
+    <style>
+        :root {
+            --toss-blue: #3182f6;
+            --toss-red: #f04452;
+            --bg-gray: #f2f4f6;
+            --bg-chart: #f9fafb;
+            --text-main: #333d4b;
+            --text-sub: #8b95a1;
+            --white: #ffffff;
+            --border-color: #e5e8eb;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-gray);
+            font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
+            color: var(--text-main);
+        }
+
+        .app-layout {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: var(--white);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding-bottom: 90px; /* 하단 버튼 공간 */
+        }
+
+        /* 상단 네비게이션 바 */
+        .top-nav {
+            display: flex;
+            align-items: center;
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .back-btn {
+            font-size: 20px;
+            color: var(--text-main);
+            text-decoration: none;
+            margin-right: 16px;
+            font-weight: bold;
+        }
+
+        .stock-name {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        /* 시세 정보 영역 */
+        .price-section {
+            padding: 24px 20px;
+        }
+
+        .current-price {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .price-change {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--toss-red); /* 상승장 기준 컬러 */
+        }
+
+        /* 가상 차트 영역 */
+        .chart-area {
+            width: 100%;
+            height: 280px;
+            background-color: var(--bg-chart);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-sub);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        /* 광고 유도 배너 (수익화 핵심) */
+        .ad-banner-section {
+            padding: 24px 20px;
+        }
+
+        .ad-button {
+            width: 100%;
+            background-color: var(--bg-gray);
+            color: var(--text-main);
+            border: none;
+            padding: 18px;
+            border-radius: 16px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .ad-button span {
+            color: var(--toss-blue);
+        }
+
+        /* 하단 고정 매수/매도 버튼 */
+        .bottom-action-bar {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: var(--white);
+            display: flex;
+            gap: 12px;
+            padding: 16px 20px;
+            box-sizing: border-box;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .btn-sell, .btn-buy {
+            flex: 1;
+            padding: 18px 0;
+            border: none;
+            border-radius: 16px;
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--white);
+            cursor: pointer;
+        }
+
+        .btn-sell {
+            background-color: #e8f3ff;
+            color: var(--toss-blue);
+        }
+
+        .btn-buy {
+            background-color: var(--toss-red);
+        }
+    </style>
+</head>
+<body>
+
+<div class="app-layout">
+    <div class="top-nav">
+        <a href="index.html" class="back-btn">←</a>
+        <div class="stock-name">가상전자 (시뮬레이션)</div>
+    </div>
+
+    <div class="price-section">
+        <div class="current-price">74,500원</div>
+        <div class="price-change">▲ 1,200 (1.63%)</div>
+    </div>
+
+    <div class="chart-area">
+        <span style="font-size: 40px; margin-bottom: 12px;">📈</span>
+        <span>실시간 차트가 그려질 공간입니다</span>
+    </div>
+
+    <div class="ad-banner-section">
+        <button class="ad-button">
+            📺 광고 보고 <span>AI 보조지표</span> 켜기
+        </button>
+    </div>
+
+    <div class="bottom-action-bar">
+        <button class="btn-sell">팔기</button>
+        <button class="btn-buy">사기</button>
+    </div>
+</div>
+
+</body>
+</html>
